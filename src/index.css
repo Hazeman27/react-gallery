@@ -130,15 +130,17 @@ img {
 }
 
 .lightbox-previous-button {
-  top: 50%;
-  left: var(--offset);
-  transform: translateY(-50%);
+  top: unset;
+  bottom: var(--offset);
+  left: 50%;
+  transform: translateX(calc(-50% - var(--offset)));
 }
 
 .lightbox-next-button {
-  top: 50%;
-  right: var(--offset);
-  transform: translateY(-50%);
+  top: unset;
+  bottom: var(--offset);
+  right: 50%;
+  transform: translateX(calc(50% + var(--offset)));
 }
 
 .lightbox img {
@@ -150,5 +152,17 @@ img {
 @media only screen and (min-width: 768px) {
   .gallery-item {
     --size: 10rem;
+  }
+
+  .lightbox-previous-button {
+    top: 50%;
+    left: var(--offset);
+    transform: translateY(-50%);
+  }
+
+  .lightbox-next-button {
+    top: 50%;
+    right: var(--offset);
+    transform: translateY(-50%);
   }
 }
